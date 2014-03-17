@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg" >
+
+    <LinearLayout
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <LinearLayout
+            android:id="@+id/get_question"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/forget_password_step"
+                    android:gravity="center_vertical|left"
+                    android:paddingRight="6dp"
+                    android:text="获取密保问题  "
+                    android:textColor="#ea6abe"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/forget_password_step"
+                    android:gravity="center_vertical|left"
+                    android:paddingRight="6dp"
+                    android:text="验证问题  "
+                    android:textColor="#9a1b6f"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="完成"
+                    android:textColor="#9a1b6f"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/forget_get_user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/forget_password_shape"
+                android:drawableLeft="@drawable/register_user"
+                android:hint=""
+                android:padding="10dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/forget_get_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/forget_password_shape"
+                android:drawableLeft="@drawable/register_email"
+                android:hint=""
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/forget_get_question"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/but_register"
+                android:text="获取密保问题"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/forget_answer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/forget_password_step"
+                    android:gravity="center_vertical|left"
+                    android:paddingRight="6dp"
+                    android:text="获取密保问题  "
+                    android:textColor="#9a1b6f"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/forget_password_step"
+                    android:gravity="center_vertical|left"
+                    android:paddingRight="6dp"
+                    android:text="验证问题  "
+                    android:textColor="#ea6abe"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="完成"
+                    android:textColor="#9a1b6f"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/forget_psw_question"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/register_edittext_top"
+                android:padding="10dp"
+                android:text="@string/register_spinner"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/forget_psw_answer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/register_edittext_bottom"
+                android:drawableLeft="@drawable/register_answer"
+                android:hint=""
+                android:padding="10dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/forget_psw_newpsw"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/forget_password_shape"
+                android:drawableLeft="@drawable/forget_password_newpassword"
+                android:hint=""
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/forget_psw_verify_newpsw"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/forget_password_shape"
+                android:drawableLeft="@drawable/register_verify_password"
+                android:hint=""
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/forget_psw_answer_commit"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/but_register"
+                android:text="提交"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

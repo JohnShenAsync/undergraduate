@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp" >
+
+        <LinearLayout style="@style/question_item" >
+
+            <RelativeLayout
+                android:id="@+id/military"
+                style="@style/question_view" >
+
+                <ImageView
+                    android:id="@+id/img_sceneryo"
+                    style="@style/question_icon" />
+
+                <TextView
+                    style="@style/question_title"
+                    android:layout_toRightOf="@id/img_sceneryo"
+                    android:text="@string/about_military" />
+
+                <ImageView style="@style/question_img" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/q_military"
+                style="@style/question_content" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/question_item" >
+
+            <RelativeLayout
+                android:id="@+id/mingshui"
+                style="@style/question_view" >
+
+                <ImageView
+                    android:id="@+id/img_sceneryt"
+                    style="@style/question_icon" />
+
+                <TextView
+                    style="@style/question_title"
+                    android:layout_toRightOf="@id/img_sceneryt"
+                    android:text="@string/title_mingshui" />
+
+                <ImageView style="@style/question_img" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/q_mingshui"
+                style="@style/question_content" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/question_item" >
+
+            <RelativeLayout
+                android:id="@+id/shengjing"
+                style="@style/question_view" >
+
+                <ImageView
+                    android:id="@+id/img_scenery"
+                    style="@style/question_icon" />
+
+                <TextView
+                    style="@style/question_title"
+                    android:layout_toRightOf="@id/img_scenery"
+                    android:text="@string/title_shengjing" />
+
+                <ImageView style="@style/question_img" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/q_shengjing"
+                style="@style/question_content" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/question_item" >
+
+            <RelativeLayout
+                android:id="@+id/yanshan"
+                style="@style/question_view" >
+
+                <ImageView
+                    android:id="@+id/img_scenerys"
+                    style="@style/question_icon" />
+
+                <TextView
+                    style="@style/question_title"
+                    android:layout_toRightOf="@id/img_scenerys"
+                    android:text="@string/title_yanshan" />
+
+                <ImageView style="@style/question_img" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/q_yanshan"
+                style="@style/question_content" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/question_item" >
+
+            <RelativeLayout
+                android:id="@+id/shungeng"
+                style="@style/question_view" >
+
+                <ImageView
+                    android:id="@+id/img_scenerys"
+                    style="@style/question_icon" />
+
+                <TextView
+                    style="@style/question_title"
+                    android:layout_toRightOf="@id/img_scenerys"
+                    android:text="@string/title_shungeng" />
+
+                <ImageView style="@style/question_img" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/q_shungeng"
+                style="@style/question_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

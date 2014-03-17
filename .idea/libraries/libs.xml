@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/youmi-android_v3.07_2012-05-04.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/youmi-appoffer_v2.13_a_2012-05-25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-logging-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/annotations.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-codec.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-httpclient-3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="button_height">45.0dip</dimen>
+    <dimen name="bottom_tab_font_size">10.0dip</dimen>
+    <dimen name="bottom_tab_padding_up">5.0dip</dimen>
+    <dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+    <dimen name="switch_logo_bottom_padding">30.0sp</dimen>
+    <dimen name="widget_height">100.0dip</dimen>
+    <dimen name="sta_height">48.0dip</dimen>
+    <dimen name="widget_write_margin_top">19.0dip</dimen>
+    <dimen name="widget_write_margin_left">10.0dip</dimen>
+    <dimen name="widget_content_margin_top">20.0dip</dimen>
+    <dimen name="widget_content_margin_left">10.0dip</dimen>
+    <dimen name="widget_logo_size">35.0dip</dimen>
+    <dimen name="title_height">74.0dip</dimen>
+    <dimen name="new_blog_size">70.0dip</dimen>
+    
+    <dimen name="widget_project_font_size">24sp</dimen>
+    <dimen name="widget_contents_font_size">13sp</dimen>
+    <dimen name="widget_date_font_size">14sp</dimen>
+    
+    
+    <dimen name="list_section_divider_min_height">32dip</dimen>
+    
+    <dimen name="context_widget_corner_radius">5dip</dimen>
+    
+    
+    
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <integer name="num_cols">1</integer>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout"
+     >
+     
+    
+    <TextView 
+         android:id="@+id/textTitle"
+         android:typeface="sans"
+         android:textSize="18px"
+         />
+     
+    <ScrollView 
+        android:id="@+id/textScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        >
+        <LinearLayout 
+            android:id="@+id/textLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView 
+                android:id="@+id/textDetails"
+                android:textSize="14px"
+                />
+            
+        </LinearLayout>
+        
+        
+    </ScrollView>
+    
+    <LinearLayout 
+        android:id="@+id/innerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        >
+        <Button 
+            android:id="@+id/okButton"
+            android:width="100px"
+            android:text="确定"
+            />
+    </LinearLayout>
+    
+    
+</LinearLayout>

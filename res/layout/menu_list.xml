@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/menu_head"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp" >
+
+        <ImageView
+            android:id="@+id/img_icon_top"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/admin" />
+
+        <TextView
+            android:id="@+id/tv_name_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/img_icon_top"
+            android:text="学生助手"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/horizontal_divider_line" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/menu_list_divider"
+        android:paddingLeft="@dimen/list_padding"
+        android:paddingRight="@dimen/list_padding" />
+
+</LinearLayout>

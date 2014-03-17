@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+     >
+    <LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         >
+
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:textColor="#000000"
+        android:text="@string/authortitle"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/author"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:textColor="#000000"
+        android:text="@string/developer"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/developer1"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/developer2"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/developer3"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/developer4"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/developer5"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/developer6"
+        android:textSize="18sp" />
+    
+     
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/developer7"
+        android:textSize="18sp" />
+     
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/developer8"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:textColor="#000000"
+        android:text="@string/contributortitle"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/contributor1"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/contributor2"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/contributor3"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/contributor4"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/contributor5"
+        android:textSize="18sp" />
+
+ <!--    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:text="@string/contributor6"
+        android:textSize="18sp" /> -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/contributor7"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:textColor="#000000"
+        android:text="@string/contributor8"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/tip"
+        android:textSize="18sp" />
+    
+    
+    </LinearLayout>
+        
+
+</ScrollView>

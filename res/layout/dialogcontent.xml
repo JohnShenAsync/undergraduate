@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dip"
+    android:orientation="horizontal" >
+
+    <!-- <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:singleLine="false"
+        android:text="有最新的软件包哦，亲快下载吧~" /> -->
+
+    <CheckBox
+        android:id="@+id/neverTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不再提示"
+        android:textColor="@color/gray"
+        android:singleLine="true" />
+
+</LinearLayout>

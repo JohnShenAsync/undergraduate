@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2009 Android Shuffle Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#ff7f8081</color>
+    <!-- Widget colors -->
+    <color name="widget_default_text_color">#ff000000</color>
+    <color name="widget_light_text_color">#ff666666</color>
+    <color name="widget_title_color">#333333</color>
+    <color name="widget_unread_color">#777777</color>
+    <color name="label_color">#777777</color>
+    <color name="small_label">#0099cc</color>
+
+    <drawable name="list_incomplete">@color/view_incomplete_background_color</drawable>
+
+    <color name="view_incomplete_background_color">#eff7f7</color>
+    <color name="background3">#ffe3e8f1</color>
+    <color name="widget_course_background_press">#ffe0edf1</color>
+    <color name="widget_btn_background">#fff4f9fc</color>
+    <color name="widget_divider">#ffc6d5dc</color>
+    <color name="widget_control_divider">#ffc6d5dc</color>
+    <color name="widget_course_num">#ffec6941</color>
+    <color name="widget_course_text">#ff2e2f30</color>
+    <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
+</resources>

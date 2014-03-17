@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="?android:attr/scrollbarSize"
+        android:gravity="center_vertical"
+            >
+
+        <TextView 
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:paddingLeft="10dip"
+            android:textSize="20dip"
+            android:text="@string/scheduling_curriculum"
+                />
+
+        <Button android:id="@+id/scheduling_update"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/scheduling_update"
+                />
+
+       
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="?android:attr/scrollbarSize"
+        android:gravity="center_vertical"
+            >
+
+        <TextView 
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:paddingLeft="10dip"
+            android:textSize="20dip"
+            android:text="@string/scheduling_score"
+                />
+
+        <Button android:id="@+id/scheduling_score_update"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/scheduling_update"
+                />
+
+       
+
+    </LinearLayout>
+
+   
+
+</LinearLayout>

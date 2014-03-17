@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="200" >
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/edit_curriculum_bg1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/classnameIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/add_new_class_icon_classname" />
+
+                    <EditText
+                        android:id="@+id/classname_edt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/classnameIcon"
+                        android:background="@null"
+                        android:hint="请输入课程名称"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/horizontal_divider_line" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/teachernameIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/add_new_class_icon_teachername" />
+
+                    <EditText
+                        android:id="@+id/teachername_edt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/teachernameIcon"
+                        android:background="@null"
+                        android:hint="请输入授课教师姓名"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/edit_curriculum_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="12dip"
+                        android:paddingLeft="6dip"
+                        android:paddingRight="6dip"
+                        android:paddingTop="12dip"
+                        android:text="上\n课\n时\n间\n 1"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/vertical_divider_line" />
+
+                    <LinearLayout
+                        android:id="@+id/class_time_out"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="6dp" >
+
+                            <ImageView
+                                android:id="@+id/week_to_week_icon"
+                                android:layout_width="25dip"
+                                android:layout_height="25dip"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:paddingLeft="5dp"
+                                android:src="@drawable/add_new_class_icon_week" />
+
+                            <TextView
+                                android:id="@+id/week_to_week_edt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/week_to_week_icon"
+                                android:paddingLeft="5dp"
+                                android:singleLine="true"
+                                android:text="1-18周"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <RadioGroup
+                                android:id="@+id/intervaltype"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dip"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/week_to_week_edt"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dip" >
+
+                                <RadioButton
+                                    android:id="@+id/both"
+                                    android:layout_width="15dip"
+                                    android:layout_height="15dip"
+                                    android:background="@drawable/radiobtn_bg"
+                                    android:button="@null"
+                                    android:checked="true" />
+
+                                <TextView android:text="全" />
+
+                                <RadioButton
+                                    android:id="@+id/even"
+                                    android:layout_width="15dip"
+                                    android:layout_height="15dip"
+                                    android:layout_marginLeft="6dip"
+                                    android:background="@drawable/radiobtn_bg"
+                                    android:button="@null" />
+
+                                <TextView android:text="单" />
+
+                                <RadioButton
+                                    android:id="@+id/odd"
+                                    android:layout_width="15dip"
+                                    android:layout_height="15dip"
+                                    android:layout_marginLeft="6dip"
+                                    android:background="@drawable/radiobtn_bg"
+                                    android:button="@null" />
+
+                                <TextView android:text="双周" />
+                            </RadioGroup>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/horizontal_divider_line" />
+
+                        <RelativeLayout
+                            android:id="@+id/class_time"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="6dp" >
+
+                            <ImageView
+                                android:id="@+id/class_time_icon"
+                                android:layout_width="25dip"
+                                android:layout_height="25dip"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:paddingLeft="5dp"
+                                android:src="@drawable/add_new_class_icon_time" />
+
+                            <TextView
+                                android:id="@+id/class_week_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/class_time_icon"
+                                android:paddingLeft="5dp"
+                                android:singleLine="true"
+                                android:text="周日"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/class_num_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/class_week_tv"
+                                android:paddingLeft="5dp"
+                                android:singleLine="true"
+                                android:text="5-6节"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/horizontal_divider_line" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:padding="6dp" >
+
+                            <ImageView
+                                android:id="@+id/class_location_icon"
+                                android:layout_width="25dip"
+                                android:layout_height="25dip"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:paddingLeft="5dp"
+                                android:src="@drawable/add_new_class_icon_location" />
+
+                            <EditText
+                                android:id="@+id/class_location_edt"
+                                android:layout_width="180dip"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/class_location_icon"
+                                android:background="@null"
+                                android:hint="请输入上课地点"
+                                android:paddingLeft="5dp"
+                                android:singleLine="true"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip" >
+
+                <Button
+                    android:id="@+id/update_curriculum"
+                    style="@style/ButtonBlue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:text="更新课程" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip" >
+
+                <Button
+                    android:id="@+id/delete_curriculum"
+                    style="@style/ButtonOrange"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:text="删除课程" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip" >
+
+                <Button
+                    android:id="@+id/cancle_curriculum"
+                    style="@style/ButtonWhite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:text="取消操作" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/timePicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <net.basilwang.ui.widget.WheelView
+            android:id="@+id/week"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <net.basilwang.ui.widget.WheelView
+            android:id="@+id/start"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <net.basilwang.ui.widget.WheelView
+            android:id="@+id/end"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/weekPicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <net.basilwang.ui.widget.WheelView
+            android:id="@+id/week_start"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <net.basilwang.ui.widget.WheelView
+            android:id="@+id/week_end"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,168 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bgo"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/register_textview_top"
+                android:padding="5dp"
+                android:text="@string/register_information"
+                android:textColor="#ffffff" />
+
+            <EditText
+                android:id="@+id/register_user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:drawableLeft="@drawable/register_user"
+                android:drawableRight="@drawable/register_notification"
+                android:hint="(2-10个字符)"
+                android:inputType="textPersonName"
+                android:maxLength="15"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColorHint="#ffdddddd"
+                android:typeface="monospace" />
+
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:drawableLeft="@drawable/register_password"
+                android:drawableRight="@drawable/register_notification"
+                android:hint="(6-18个字符)"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColorHint="#ffdddddd"
+                android:typeface="monospace" />
+
+            <EditText
+                android:id="@+id/register_verify_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:drawableLeft="@drawable/register_verify_password"
+                android:drawableRight="@drawable/register_notification"
+                android:hint="(请确认密码)"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColorHint="#ffdddddd"
+                android:typeface="monospace" />
+
+            <EditText
+                android:id="@+id/register_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:drawableLeft="@drawable/register_email"
+                android:drawableRight="@drawable/register_notification"
+                android:hint="(请输入正确的邮箱)"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColorHint="#ffdddddd"
+                android:typeface="monospace" />
+
+            <EditText
+                android:id="@+id/register_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/register_edittext_bottom"
+                android:drawableLeft="@drawable/register_phone"
+                android:hint="(选填)"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColorHint="#ffdddddd"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/register_textview_top"
+                android:padding="5dp"
+                android:text="@string/register_spinner"
+                android:textColor="#ffffff"
+                android:typeface="monospace" />
+
+            <Spinner
+                android:id="@+id/register_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/register_spinner"
+                android:entries="@array/num"
+                android:padding="10dp"
+                android:prompt="@string/register_spinner"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/register_answer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/register_edittext_bottom"
+                android:drawableLeft="@drawable/register_answer"
+                android:drawableRight="@drawable/register_notification"
+                android:hint="(3-10个字符)"
+                android:maxLength="20"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColorHint="#ffdddddd"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/register_notification"
+                android:padding="5dp"
+                android:text="@string/register_notification"
+                android:textColor="#343fd6" >
+            </TextView>
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but_register"
+                android:text="注册并登录"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center" />
+
+</FrameLayout>

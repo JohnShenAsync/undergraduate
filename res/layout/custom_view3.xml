@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:duplicateParentState="true"
+    android:minHeight="40dip"
+    android:paddingLeft="0dip" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="10dip" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/content_page_large_text"
+            android:singleLine="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title" />
+    </LinearLayout>
+
+</RelativeLayout>

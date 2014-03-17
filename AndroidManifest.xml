@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.basilwang"
+    android:versionCode="361"
+    android:versionName="3.61" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 添加以下两个权限，用于支持特殊的广告形式 -->
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" >
+    </uses-permission>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+
+        <!-- 添加高德地图Key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="0e5956683baee48a845e3dfb122dce8c" />
+
+        <!--
+        <activity android:name="org.androidpn.client.NotificationDetailsActivity"
+			android:label="Notification Details">
+		</activity>
+		<activity android:name="org.androidpn.client.NotificationSettingsActivity"
+			android:label="Notification Settings">
+		</activity>
+		<service android:enabled="true"
+			android:name="org.androidpn.client.NotificationService"
+			android:label="NotificationService">
+			<intent-filter>
+				<action android:name="org.androidpn.client.NotificationService" />
+			</intent-filter>
+		</service>
+        -->
+
+
+        <!-- 下面两个Activity是推送用到的 -->
+        <activity
+            android:name="org.androidpn.client.NotificationDetailsActivity"
+            android:label="Notification Details"
+            android:theme="@style/Theme.Sherlock" >
+        </activity>
+        <activity
+            android:name="org.androidpn.client.NotificationSettingsActivity"
+            android:label="Notification Settings" >
+        </activity>
+
+        <service
+            android:name="org.androidpn.client.NotificationService"
+            android:enabled="true"
+            android:label="NotificationService" >
+            <intent-filter>
+                <action android:name="org.androidpn.client.NotificationService" />
+            </intent-filter>
+        </service>
+        <!-- 到这里是推送用到的activity以及service -->
+
+        <activity
+            android:name="net.basilwang.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="net.basilwang.CalendarActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="net.basilwang.CheckCodeDialog"
+            android:theme="@style/DialogSlideAnim" >
+        </activity>
+        <activity
+            android:name="net.basilwang.LogonPreferenceActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MySherlock" >
+        </activity>
+        <activity
+            android:name="net.basilwang.EditLogonPreferenceActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MySherlock" >
+        </activity>
+        <activity
+            android:name="net.basilwang.EditSemesterBeginAndEndDateActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MySherlock" >
+        </activity>
+        <activity
+            android:name="net.basilwang.MyPreferenceActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Sherlock" >
+        </activity>
+        <activity
+            android:name="net.basilwang.UndergraduateActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="net.basilwang.CurriculumActivity"
+            android:theme="@style/Theme.Sherlock" >
+        </activity>
+        <activity
+            android:name="net.basilwang.BlocksActivity"
+            android:theme="@style/Theme.Sherlock.Light" >
+        </activity>
+        <activity
+            android:name="net.basilwang.StaticAttachmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MySherlock" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.basilwang.SplashActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.basilwang.FragmentStatePagerSupport"
+            android:theme="@style/Theme.Sherlock" >
+        </activity>
+        <activity
+            android:name="net.basilwang.CurriculumViewPagerActivity"
+            android:theme="@style/Theme.Sherlock" >
+        </activity>
+        <activity
+            android:name="net.basilwang.ViewPagerActivity"
+            android:theme="@style/Theme.Sherlock" >
+        </activity>
+        <activity
+            android:name="net.basilwang.EditCurriculumActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="net.youmi.android.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity
+            android:name="net.youmi.android.appoffers.YoumiOffersActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation" >
+        </activity>
+        <activity
+            android:name="net.basilwang.About_us"
+            android:label="@string/about"
+            android:theme="@style/Theme.MySherlock" >
+        </activity>
+        <activity
+            android:name="net.basilwang.ShareOnWeibo"
+            android:label="@string/shareonweibo"
+            android:theme="@style/Theme.Sherlock" >
+        </activity>
+
+        <service
+            android:name="net.basilwang.widget.CurriculumWidgetProviderV11$WidgetService"
+            android:enabled="@bool/atLeastHoneyComb"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver
+            android:name="net.basilwang.widget.CurriculumWidgetProviderV11"
+            android:enabled="@bool/atLeastHoneyComb"
+            android:label="学生助手(2x2)" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_2x2" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.basilwang.widget.CurriculumWidgetProvider_4x2"
+            android:enabled="@bool/preHoneyComb"
+            android:label="学生助手(4x2)" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider_4x2" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="net.basilwang.widget.previous" />
+                <action android:name="net.basilwang.widget.next" />
+                <action android:name="net.basilwang.update_widget_data" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="YOUMI_CHANNEL"
+            android:value="10070" >
+        </meta-data>
+
+        <activity android:name="cn.sharesdk.framework.AuthorizeActivity" >
+        </activity>
+        <activity
+            android:name="cn.sharesdk.demo.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.basilwang.MessageFragment"
+            android:label="@string/title_activity_message" >
+        </activity>
+        <activity android:name="cn.sharesdk.onekeyshare.ShareAllGird" >
+        </activity>
+        <activity android:name="cn.sharesdk.onekeyshare.SharePage" >
+        </activity>
+        <activity android:name="net.basilwang.fresh.SchoolBusWebViewActivity" >
+        </activity>
+        <activity android:name="net.basilwang.fresh.BusWebViewActivity" >
+        </activity>
+        <activity android:name="net.basilwang.EditLongonPreferenceActivity" >
+        </activity>
+        <activity android:name="net.basilwang.LoginActivity" >
+        </activity>
+        <activity android:name="net.basilwang.RegisterActivity" >
+        </activity>
+        <activity
+            android:name="net.basilwang.ForgetPswActivity"
+            android:label="@string/title_activity_forget_psw" >
+        </activity>
+        <activity android:name="BaseActivityone"></activity>
+    </application>
+
+</manifest>

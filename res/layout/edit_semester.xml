@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/edit_semester_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffd3d3d3"
+        android:gravity="center"
+        android:paddingTop="5dip"
+        android:textColor="#000000"
+        android:textSize="16dip" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffd3d3d3" >
+
+        <br.com.dina.ui.widget.UITableView
+            android:id="@+id/edit_semester_tableView"
+            style="@style/UITableView" />
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, UndergraduateActivity!</string>
+    <string name="app_name">山财大学生助手</string>
+    <string name="tabcalendar">日程</string>
+    <string name="tabcurriculum">课程</string>
+    <string name="tabconfig">配置</string>
+    <string name="tabmore">刷新</string>
+    <string name="logon_preferences">账号管理</string>
+    <string name="logon_add_preferences">添加学号</string>
+    <string name="logon_add_preferences_tip">添加账号后，别忘了点击设置才能生效</string>
+    <string name="logon_identifier">账号标识</string>
+    <string name="logon_identifier_settings">给自己随便起个名字吧!</string>
+    <string name="logon_url">教务系统网址</string>
+    <string name="logon_url_settings">http://123.232.100.110</string>
+    <string name="logon_user">学号</string>
+    <string name="logon_pass">密码</string>
+    <string name="entranceyear">入学年份</string>
+    <string name="entranceyear_hint">例如:2012</string>
+    <string name="logon_check_settings">检查更新</string>
+    <string name="logon_background_sync">后台刷新间隔</string>
+    <string name="logoff_tips">您确定删除此帐号的信息？\n提示：只删除存储在手机内的信息，对教务系统的记录无任何影响</string>
+    <string name="logoff_title">注销帐号</string>
+    <string name="close_ad">&lt;font color=\"#ffffff\">关闭广告&lt;/font></string>
+    <string name="log_off">&lt;font color=\"#ffffff\">注销账号&lt;/font></string>
+    <string name="menu_done">保存</string>
+    <string name="menu_set">设置</string>
+    <string name="already_checked">已选择</string>
+    <string name="cancel_button_title">取消</string>
+    <string name="sync_interval_none">从不</string>
+    <string name="sync_interval_1w">1周</string>
+    <string name="sync_interval_1m">1月</string>
+    <string name="sync_interval_2m">2月</string>
+    <string name="sync_interval_3m">3月</string>
+    <string name="scheduling_title">同步</string>
+    <string name="scheduling_collapsed">单击显示同步选项</string>
+    <string name="scheduling_expanded">单击关闭同步选项</string>
+    <string name="scheduling_curriculum">同步课程表</string>
+    <string name="scheduling_score">同步成绩</string>
+    <string name="scheduling_update">刷新</string>
+    <string name="thank_ruguozhai">感谢如果宅提供服务器支持</string>
+    <string name="day1">星期一</string>
+    <string name="day2">星期二</string>
+    <string name="day3">星期三</string>
+    <string name="day4">星期四</string>
+    <string name="day5">星期五</string>
+    <string name="day6">星期六</string>
+    <string name="day7">星期日</string>
+    <string name="norecord">没有课程</string>
+    <string name="weekview">周视图</string>
+    <string name="dayview">天视图</string>
+    <string name="cemester_index_choose_preferences">选择后才能获取查看该学期课表成绩</string>
+    <string name="cemester_start_preferences_tip">设置起始周，课程根据在起始终止周区间呈现</string>
+    <string name="checkcode_hint">请输入验证码,点击验证码图片刷新</string>
+    <string name="checkcode_tip">点击刷新验证码</string>
+    <string name="checkcode_text">验证码</string>
+    <string name="networkavailable">联网中</string>
+    <string name="nonetwork">未联网</string>
+    <string name="checknetwork">检查网络</string>
+    <string name="nonetwork_toast">好像没有联网哦,无法更新数据</string>
+    <string name="semesterindexvalue1">2009&#8211;2010|1</string>
+    <string name="semesterindexvalue2">2009&#8211;2010|2</string>
+    <string name="semesterindexvalue3">2010&#8211;2011|1</string>
+    <string name="semesterindexvalue4">2010&#8211;2011|2</string>
+    <string name="semesterindexvalue5">2011&#8211;2012|1</string>
+    <string name="semesterindexvalue6">2011&#8211;2012|2</string>
+    <string name="semesterindexvalue7">2012&#8211;2013|1</string>
+    <string name="noscore">请单击右上角标志进行成绩下载</string>
+    <string name="nocurriculum">请单击右上角标志进行课程下载</string>
+    <string name="about">关于我们</string>
+    <string name="fresh_question">新生问答</string>
+    <string name="authortitle">作者：</string>
+    <string name="author">BasilWang</string>
+    <string name="weibo">weibo.com/basilwang</string>
+    <string name="developer">主程序员：</string>
+    <string name="developer1">魏小兴</string>
+    <string name="developer2">李玉刚 信息1001</string>
+    <string name="developer3">李文飞 信息1001</string>
+    <string name="developer4">相蕾 信息1001</string>
+    <string name="developer5">许严 信息1001</string>
+    <string name="developer6">朱胜男 信息1001</string>
+    <string name="developer7">申剑 电商1001</string>
+    <string name="developer8">杨宇 信息1003</string>
+    <string name="contributortitle">贡献者：</string>
+    <string name="contributor1">SalenCao</string>
+    <string name="contributor2">信息1001王潇</string>
+    <string name="contributor3">李晓玉</string>
+    <string name="contributor4">Xinran Huang</string>
+    <string name="contributor5">Yujie Cao</string>
+    <string name="contributor6">阿萌是小平weibo.com/u/1635069512</string>
+    <string name="contributor7">Jing guo</string>
+    <string name="contributor8">Wenjing Zhang</string>
+    <string name="tip">如果您发现了Bug请反馈至ocam@163.com，我们表示感谢！</string>
+    <string name="noaccount">您还没有创建或设置账号吧，亲</string>
+    <string name="pleasecreateaccount">设置账号，亲</string>
+    <string name="myaccount">的助手</string>
+    <string name="errorpasswordmaybe">学号和密码以及验证码可能有误，请检查！</string>
+    <string name="weekview_unlock">任务解锁</string>
+    <string name="no_downloaded_semester">没有已经下载的课程表</string>
+    <string name="downloaded_semester">已经下载的课程表</string>
+    <string name="widget_loading">载入\u2026</string>
+    <string name="set_semester_begindate">设置学期起始日期</string>
+    <string name="set_semester_enddate">设置学期结束日期</string>
+    <string name="shareonweibo">分享到微博</string>
+    <string name="no_account_tip">请先添加账号</string>
+    <string name="share_content">山财大学生助手可连接学校教务系统查询课程表，期末成绩， 学分，绩点。下载链接入口：
+        木蚂蚁http://www.mumayi.com/android-120469.html，应用汇http://www.appchina.com/app/net.basilwang/。
+        若果您有什么问题，请私信我们新浪微博或者人人主页@山财大学生助手，给我们留言，我们会尽最大努力为您服务。</string>
+    <string name="text_to_share_hint">请评价我们的软件吧，如果您觉得做的好，请分享给您的好友吧</string>
+    <string name="changing_fragments">Changing Fragments</string>
+    <string name="title_activity_menu_change">MenuChange</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="startpoint">起点:请点击建筑物的名字</string>
+    <string name="endpoint">终点:请点击建筑物的名字</string>
+    <string name="btn_clear">清除</string>
+    <string name="desc">搜索</string>
+    <string name="map_not_ready">SupportMapFragment初始化失败</string>
+    <string name="btn_viewflipper_context">周边</string>
+    <string name="about_entertainment">四大校区攻略</string>
+    <string name="about_bus">火车站公交</string>
+    <string name="about_organizations">社团信息</string>
+    <string name="about_school_bus">关于校车</string>
+    <string name="question_military"> &lt;font color=\"#C71585\">军训小经验：&lt;/font>&lt;br>
+        1、军训大时间大约在两周左右&lt;br>
+        2、军训时发的鞋子是很硌脚和磨脚的，所以建议小学弟小学妹们，最好自己带上一双鞋垫，免得到时候把脚磨破了&lt;br>
+        3、每晚睡前躺在床上要揉小腿，不用多专业，一条腿揉5分钟就好，不然第二天会酸疼得抬不起腿&lt;br>
+        4、军训时一定要记得带水，最好带大杯&lt;br>
+        5、军训期间只能穿迷彩服，所以要经常清洗&lt;br>
+        6、军训并不是一件很痛苦的事，而且会有很多有趣的事发生，希望大家乐观对待&lt;br>    </string>
+    <string name="title_mingshui">明水校区</string>
+    <string name="title_shengjing">圣井校区</string>
+    <string name="title_yanshan">燕山校区</string>
+    <string name="title_shungeng">舜耕校区</string>
+    <string name="question_mingshui">&lt;font color=\"#5B00AE\">济南市经十东路东首大学路1686号&lt;br>邮编：250202&lt;/font>&lt;br>
+        &lt;font color=\"#C71585\">周边学校：&lt;/font>学校西门出去即是齐鲁师范学院，
+                      齐鲁师范北边是济南大学医学研究所，学校北门出去即是山东凯文职业技术学院凯文西边是章丘中学，
+                      东边是济南工程职业技术学院，再往东还有个山东电子职业技术学院&lt;br>
+        &lt;font color=\"#C71585\"> 周边公交：&lt;/font>
+        3路，经过的地方：木厂村→旭升→山东财经大学西门→山东财经大学 →章丘市高级中学→山东凯文职业技术学院→济王路李家埠路口→开发区管委会→政务区（龙盘家具城）→唐王山路口→疾控中心→章丘市实验中学→杨胡村路口→义乌市场→章丘市火车站→眼名泉小区→城区中队→党校街路口→嘉华购物广场→百货大楼→章丘四中→荷花广场→长途汽车站&lt;br>
+        &lt;font color=\"#C71585\">购物：&lt;/font>&lt;br>
+        1、西门商街：东西比较实惠。内有小吃(鸡公煲、兰州拉面、西安板面、烧烤、瓦房人家等)、药店、水果店、眼镜店、旅馆等。&lt;br>
+        2、小芙蓉街：即双山大街，内有小吃街、KTV、宾馆、药店、双山医院、衣服店、东方冷库超市等&lt;br>
+        3、义乌百货市场：可乘坐3路到达，内有衣服、鞋子、日常用品、各种百货&lt;br>
+        4、百货大楼：可乘3路到达，有华联购物超市、品牌衣帽店、运动器械点、手机商城、电脑商城、农业银行、建设银行、各种美食等&lt;br>
+        &lt;font color=\"#C71585\">游玩：&lt;/font>百丈崖、百脉泉公园、朱家峪、三王峪、南部山区、济南植物园(章丘埠村)、绣源河水幕电影(每周六晚喷泉)、荷花公园、眼明泉等&lt;br>
+        &lt;font color=\"#C71585\">社团信息：&lt;/font>&lt;br>
+        · &lt;font color=\"#A42D00\">实践创新类：&lt;/font>绿诺环保协会  自行车协会  DIY协会  EBS电台  金融投资协会  贝克街卓游社  光影文娱社团&lt;br>
+        · &lt;font color=\"#A42D00\">文娱体育类：&lt;/font>魔力天涯  轮滑协会  武术协会  动漫协会  话剧社  自由舞社  跆拳道协会  偶偶舞社  吉他协会&lt;br>
+        · &lt;font color=\"#A42D00\">文化学术类：&lt;/font>英语协会  文学社  读者协会  书画协会  记者团&lt;br>
+        · &lt;font color=\"#A42D00\">公益志愿类：&lt;/font>保护黄河源协会  青年志愿者协会  星火志愿者协会  泉城义工协会  齐鲁情协会  青年助残协会&lt;br></string>
+    <string name="question_shengjing">&lt;font color=\"#5B00AE\">济南市经十东路18602号&lt;br>邮编：250220&lt;/font>&lt;br>
+       &lt;font color=\"#C71585\">周边公交：&lt;/font>K301,路线：大学科技园→大学路→晶恒工业园→平安店→杜家庙→朱庄→长途汽车西站→北小辛庄西街→省体育中心→千佛山→山大路南口→石河岭→高新开发区→田庄东→邢村立交桥→山青院(力诺科技园)→力诺集团→西彩石→教育城→埠东村→马头山村→鸡山村→圣井→鹅庄(新植物园)→章丘中学→山东凯文学院(章丘西环路)→双山大街南口→章丘(山东旅游职业学院)→山东技师学院&lt;br>
+       &lt;font color=\"#C71585\">周边饮食：&lt;/font>东门小吃街。内有包子、盒饭、各种盖饭，寿司、米线等。&lt;br>
+        &lt;font color=\"#C71585\">社团信息：&lt;/font>&lt;br>
+        · &lt;font color=\"#A42D00\">学术科研类：&lt;/font>大学生科研协会  晨曦文学社  金融协会  辩论协会  知行社  企业管理者协会&lt;br>
+        · &lt;font color=\"#A42D00\">运动健身类：&lt;/font>安迪网球社  乒乓球协会  追风轮滑社  羽毛球协会  自由滑协会  搏击协会  篮球公园  韵动健身协会  足球俱乐部&lt;br>
+        · &lt;font color=\"#A42D00\">艺术审美类：&lt;/font>摄影协会  话剧社  天文爱好者协会  审艺堂街舞社  旅游协会  舞乐艺术协会  手工制作协会&lt;br>
+        · &lt;font color=\"#A42D00\">特长爱好类：&lt;/font>动漫社  贝彩社  棋苑社  CY艺画社  爱乐社  军事爱好者协会&lt;br>
+        · &lt;font color=\"#A42D00\">公益语言类：&lt;/font>英语营地  大学生心理协会  陶行知协会  社会工作者协会  Idea精英汇  爱心公益协会  青年志愿者协会  环保志愿者协会  成功学社  粤韵坊  联通未来青春创业社  普法协会&lt;br></string>
+    <string name="question_yanshan">&lt;font color=\"#5B00AE\">济南市历下区二环东路7366号&lt;br>邮编：250014&lt;/font>&lt;br>
+       &lt;font color=\"#C71585\">周边公交：&lt;/font>&lt;br>49路、K50路、K96路、K56路、152路&lt;br>
+       &lt;font color=\"#C71585\">周边饮食：&lt;/font>&lt;br>1、校南门右拐有很多小餐馆(家常菜馆还是不错滴)，米线，煲饭堂，烧烤，麻辣烫，还有各种小吃等。&lt;br>
+       2、校西门有建设银行、品至馅饼、火车票代售点等。&lt;br>
+       &lt;font color=\"#C71585\">济南吃喝玩乐：&lt;/font>&lt;br>
+       1、泉城广场→趵突泉、黑虎泉→大明湖附近(有银座、贵和、恒隆广场等大型购物休闲商场。泉城路的芙蓉街有各种特色小吃)&lt;br>
+       2、万达广场、经四路人防商城(衣服、鞋子、视频、小吃等，人民商城对面有金汉斯自助)&lt;br>
+       3、大观园(有济南特色饭店也有西餐，小吃街)&lt;br>
+       4、山师(是女生逛街的好去处)&lt;br>
+       5、泺源大街银座附近(韩国城、佛山街分别为购物和吃饭的地方)&lt;br>
+       6、老东门(是买衣服、包包等价格相对比较便宜的地方&lt;br></string>
+    <string name="question_shungeng">&lt;font color=\"#5B00AE\">济南市市中区舜耕路40号&lt;br>邮编：250014&lt;/font>&lt;br>
+       &lt;font color=\"#C71585\">周边公交：&lt;/font>&lt;br>43路、48路、34路、K100路、152路&lt;br>
+       &lt;font color=\"#C71585\">吃喝玩乐：&lt;/font>&lt;br>
+       1、泉城广场→趵突泉、黑虎泉→大明湖附近(有银座、贵和、恒隆广场等大型购物休闲商场。泉城路的芙蓉街有各种特色小吃)&lt;br>
+       2、万达广场、经四路人防商城(衣服、鞋子、视频、小吃等，人民商城对面有金汉斯自助)&lt;br>
+       3、大观园(有济南特色饭店也有西餐，小吃街)&lt;br>
+       4、山师(是女生逛街的好去处)&lt;br>
+       5、泺源大街银座附近(韩国城、佛山街分别为购物和吃饭的地方)&lt;br>
+       6、老东门(是买衣服、包包等价格相对比较便宜的地方&lt;br></string>
+    <string name="about_military">关于军训</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="register">注册</string>
+    <string name="register_spinner">密保问题</string>
+    <string name="register_information">注册信息</string>
+    <string name="register_com_information">完善信息</string>
+    <string name="register_notification">为必填信息</string>
+    <string name="title_activity_log_on">LogOnActivity</string>
+    <string name="title_activity_forget_psw">ForgetPswActivity</string>
+
+</resources>

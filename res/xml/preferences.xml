@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2010 Android Shuffle Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="logon_preferences"
+        android:title="@string/logon_preferences" >
+        <PreferenceScreen
+            android:key="logon_add_preferences"
+            android:summary="@string/logon_add_preferences_tip"
+            android:title="@string/logon_add_preferences" >
+
+            <!--
+                 <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="net.basilwang.LogonPreferenceActivity"
+                android:targetPackage="net.basilwang" />
+            -->
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="课程设置" >
+        <ListPreference
+            android:defaultValue="@string/semesterindexvalue2"
+            android:entries="@array/semesterindex"
+            android:entryValues="@array/semesterindexvalue"
+            android:key="curr_cemester_index_preferences"
+            android:summary="@string/cemester_index_choose_preferences"
+            android:title="课程学年学期设置" >
+        </ListPreference>
+        <ListPreference
+            android:defaultValue="@string/semesterindexvalue2"
+            android:entries="@array/semesterindex"
+            android:entryValues="@array/semesterindexvalue"
+            android:key="score_cemester_index_preferences"
+            android:summary="@string/cemester_index_choose_preferences"
+            android:title="成绩学年学期设置" >
+        </ListPreference>
+
+        <PreferenceScreen
+            android:key="cemester_start_preferences"
+            android:summary="@string/cemester_start_preferences_tip"
+            android:title="学期起始设置" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="cemester_end_preferences"
+            android:title="学期结束设置" >
+        </PreferenceScreen>
+        <PreferenceScreen android:key="score_spinner" >
+        </PreferenceScreen>
+        <PreferenceScreen android:key="score_semester_name" >
+        </PreferenceScreen>
+        <PreferenceScreen android:key="curriculum_semester_name" >
+        </PreferenceScreen>
+
+        <CheckBoxPreference
+            android:key="weekview_enabled"
+            android:title="周视图开启" />
+        <!--
+             <CheckBoxPreference 
+              android:key="score_enabled"
+                android:title="成绩视图开启" />
+        -->
+        <CheckBoxPreference
+            android:key="close_ad"
+            android:title="关闭广告a" />
+        <!--
+        <PreferenceScreen  android:title="课程设置" >
+
+        </PreferenceScreen>
+         <PreferenceScreen  android:title="单双周设置" >
+
+        </PreferenceScreen>
+        -->
+
+        <PreferenceScreen
+            android:key="about_us"
+            android:title="关于我们a" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="shareonweibo"
+            android:title="分享至微博" >
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

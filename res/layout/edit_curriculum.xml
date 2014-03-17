@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	>
+<!-- <TableRow>
+    <net.basilwang.UpdateProgressView
+         android:layout_width="50dip"
+         android:layout_height="20dip"
+        ></net.basilwang.UpdateProgressView>
+    
+</TableRow> -->
+<TableRow>
+<TextView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="课程名称:"
+	android:textSize="10pt"
+	/>
+<EditText
+    android:id="@+id/txtCurriculumName"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_weight="1"
+	android:editable="false"
+	/>
+</TableRow>
+<TableRow>
+<TextView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="重要程度:"
+	android:textSize="10pt"	
+	/>
+
+<Spinner
+    android:id="@+id/spinnerSeverity"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:entries="@array/severity"
+     />
+
+</TableRow>
+<TableRow>
+<Button 
+     android:id="@+id/btnSave"
+     android:text="保存"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"/>
+<Button 
+     android:id="@+id/btnCancel"
+     android:text="取消"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"/>
+</TableRow>
+</TableLayout>

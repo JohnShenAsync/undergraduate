@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="notitle">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="main_tab_bottom">
+        <item name="android:textSize">@dimen/bottom_tab_font_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/home_btn_bg</item>
+        <item name="android:paddingTop">@dimen/bottom_tab_padding_up</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">@dimen/bottom_tab_padding_drawable</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="LabelTextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- See comments for @dimen/list_section_divider_min_height -->
+        <item name="android:minHeight">@dimen/list_section_divider_min_height</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/small_label</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="DialogSlideAnim" parent="@style/Theme.MySherlock">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="widget_list_item">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="prehoneycomb_widget_project" parent="widget_list_item">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">1dip</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:lines">1</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="prehoneycomb_widget_description" parent="widget_list_item">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">1dip</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:lines">1</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!--
+    <style name="Theme.MySherlock" parent="Theme.Sherlock">
+
+       
+        <item name="actionModeCloseDrawable">@drawable/ic_menu_cancel_holo_dark</item>
+        <item name="android:actionModeCloseDrawable">@drawable/ic_menu_cancel_holo_dark</item>
+       
+        <item name="android:textColor">#000000</item>
+    </style>
+    -->
+    <style name="Theme.MySherlock" parent="Theme.Sherlock.Light">
+        <item name="actionBarStyle">@style/Theme.MyTheme.ActionBar</item>
+        <item name="android:actionBarStyle">@style/Theme.MyTheme.ActionBar</item>
+    </style>
+
+    <style name="Theme.MyTheme.ActionBar" parent="Widget.Sherlock.ActionBar">
+        <item name="android:background">#a61300</item>
+        <item name="background">#a61300</item>
+        <item name="android:titleTextStyle">@style/Theme.MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="titleTextStyle">@style/Theme.MyTheme.ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="Theme.MyTheme.ActionBar.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="week_day_header">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingRight">76dip</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:lines">1</item>
+        <item name="android:clickable">false</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/Dialog_Anim</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="Dialog_Anim">
+        <item name="android:windowEnterAnimation">@anim/fadding_in</item>
+        <item name="android:windowExitAnimation">@anim/fadding_out</item>
+    </style>
+
+    <style name="question_content">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">0dp</item>
+    </style>
+
+    <style name="question_img">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:src">@drawable/question_end1</item>
+    </style>
+
+    <style name="question_item">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_layout</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="question_view">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="question_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="question_icon">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:src">@drawable/question_start</item>
+    </style>
+
+    <style name="ButtonOrange" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@drawable/button_orange_txcolor_selector</item>
+        <item name="android:background">@drawable/button_orange_bg_selector</item>
+    </style>
+
+    <style name="ButtonWhite" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@drawable/button_white_txcolor_selector</item>
+        <item name="android:background">@drawable/button_white_bg_selector</item>
+    </style>
+
+    <style name="ButtonBlue" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@drawable/button_orange_txcolor_selector</item>
+        <item name="android:background">@drawable/button_blue_bg_selector</item>
+    </style>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="num">
+        <item>我的学院</item>
+        <item>我的辅导员是谁</item>
+        <item>我最亲爱的小伙伴</item>
+        <item>我的高中</item>
+        <item>我最想去的地方</item>
+    </string-array>
+
+</resources>

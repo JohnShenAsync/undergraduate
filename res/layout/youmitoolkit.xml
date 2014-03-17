@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/youmi_layout" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:padding="3dip"
+    android:gravity="center_vertical"
+    >
+    <ImageView 
+        android:id="@+id/youmi_icon"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"        
+    />
+    
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_toRightOf="@id/youmi_icon"
+        android:orientation="vertical"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"        
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="6dip"
+    >
+        <TextView 
+            android:id="@+id/youmi_title" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textColor="#000"
+            android:textSize="18dip"
+        />
+        
+        <TextView
+        android:id="@+id/youmi_content" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textColor="#000"
+            android:textSize="14dip"
+            android:layout_below="@id/youmi_title"          
+        />
+    </RelativeLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Spinner xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/semester_spinner"
+            android:layout_width="0dp"
+            android:layout_height="30dip"
+            android:layout_marginLeft="5dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="90"
+            android:background="@drawable/btn_dropdown"
+            android:title="成绩学年学期设置" >
+        </Spinner>
+
+        <Button xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/download_semester_button"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_weight="10"
+            android:background="@drawable/download"
+             />
+    </LinearLayout>

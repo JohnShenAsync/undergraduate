@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dip"
+        android:paddingBottom="10dip" >
+
+        <TextView
+            android:id="@+id/modify_password_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/register_textview_top"
+            android:padding="5dp"
+            android:text="修改密码"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/modify_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="原密码"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/origin_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入原密码"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:singleLine="true"
+                android:textColor="#000000" >
+            </EditText>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="新密码"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/new_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入新密码"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:singleLine="true"
+                android:textColor="#000000" >
+            </EditText>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="确认新密码"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/new_password_sure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="请确认新密码"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:singleLine="true"
+                android:textColor="#000000" >
+            </EditText>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bind_userNo_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/register_textview_top"
+            android:padding="5dp"
+            android:text="绑定学号"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/bind_userNo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/user_identifier_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="@string/logon_identifier"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/user_identifier"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/logon_identifier_settings"
+                android:maxLength="250"
+                android:singleLine="true"
+                android:textColor="#000000" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/user_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="@string/logon_user"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/logon_user"
+                android:maxLength="250"
+                android:phoneNumber="true"
+                android:singleLine="true"
+                android:textColor="#000000" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/pass_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="@string/logon_pass"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/logon_pass"
+                android:inputType="textPassword"
+                android:maxLength="250"
+                android:singleLine="true"
+                android:textColor="#000000" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/entranceyear_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="@string/entranceyear"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/entranceyear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/entranceyear_hint"
+                android:inputType="number"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:textColor="#000000" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/url"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/logon_url_settings"
+                android:maxLength="250"
+                android:singleLine="true"
+                android:textColor="#000000" >
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

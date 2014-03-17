@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:duplicateParentState="true" 
+	android:paddingLeft="0dip"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:minHeight="40dip">
+	 <LinearLayout android:duplicateParentState="true" android:gravity="center_vertical" android:paddingLeft="10dip" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:text="name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/score_name" style="@style/content_page_large_text" />
+        <TextView android:text="summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/point" android:visibility="visible" style="@style/content_page_small_text" />
+    </LinearLayout>
+	<TextView
+         android:id="@+id/score"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+         android:paddingRight="10dip"
+         android:indeterminateOnly="true"
+         android:visibility="visible" 
+         android:textColor="#383838"         
+		 android:text="1.0"/>
+		
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="3dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <AutoCompleteTextView
+                android:id="@+id/autotextview_roadsearch_start"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:dropDownVerticalOffset="1.0dip"
+                android:hint="@string/startpoint"
+                android:imeOptions="actionDone"
+                android:inputType="text|textAutoComplete"
+                android:maxLength="20"
+                android:textColor="#000000"
+                android:textSize="12.0sp" >
+            </AutoCompleteTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <AutoCompleteTextView
+                android:id="@+id/autotextview_roadsearch_goals"
+                android:layout_width="0dip"
+                android:layout_height="35.0dip"
+                android:layout_weight="3"
+                android:hint="@string/endpoint"
+                android:imeOptions="actionDone"
+                android:inputType="text|textAutoComplete"
+                android:maxLength="20"
+                android:textColor="#000000"
+                android:textSize="12.0sp" />
+
+            <ImageButton
+                android:id="@+id/imagebtn_roadsearch_search"
+                android:layout_width="0dip"
+                android:layout_height="35.0dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_default_small"
+                android:contentDescription="@string/desc"
+                android:src="@drawable/btn_poi_search_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="5" />
+
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+        </ViewFlipper>
+    </LinearLayout>
+
+</LinearLayout>

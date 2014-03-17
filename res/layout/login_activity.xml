@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bgo" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/login_undergradute" />
+
+    <LinearLayout
+        android:id="@+id/edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_margin="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/log_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dip"
+            android:background="@drawable/login_name_edit"
+            android:drawableLeft="@drawable/login_user"
+            android:hint="(2-10个字符)"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorHint="#ffdddddd"
+            android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/log_psw"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_password_edit"
+            android:drawableLeft="@drawable/login_password"
+            android:hint="(6-18个字符)"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="#ffdddddd"
+            android:typeface="monospace" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/but_login"
+            android:text="登  录"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/log_register"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/but_register"
+            android:text="注  册"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/check"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/log_forget"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="right"
+            android:text="忘记密码？"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8.0dip"
+    android:layout_marginRight="8.0dip"
+    android:layout_marginTop="8.0dip" >
+
+    <LinearLayout
+        android:id="@+id/widget_header"
+        android:layout_width="match_parent"
+        android:layout_height="43dip"
+        android:background="@drawable/header_bg_task_widget_holo"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/widget_weekofday"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="8dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/widget_title_color" />
+
+        <TextView
+            android:id="@+id/widget_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dip"
+            android:textColor="@color/widget_unread_color"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/widget_control"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="4dp"
+        android:layout_below="@id/widget_header" >
+
+        <TextView
+            android:id="@+id/widget_txv_control_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="1.0px"
+            android:layout_centerVertical="true"
+            android:background="@color/widget_control_divider" />
+
+        <ImageView
+            android:id="@+id/widget_imgv_prev_verse"
+            android:layout_width="40.0dip"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/widget_txv_control_divider"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/widget_prev_selector" />
+
+        <ImageView
+            android:id="@+id/widget_imgv_next_verse"
+            android:layout_width="40.0dip"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/widget_txv_control_divider"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/widget_next_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1.0px"
+            android:layout_alignLeft="@id/widget_imgv_prev_verse"
+            android:layout_alignRight="@id/widget_imgv_prev_verse"
+            android:layout_centerVertical="true"
+            android:background="@color/widget_control_divider" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/widget_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/widget_header"
+        android:layout_toLeftOf="@id/widget_control"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/widget_background_selector"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/entry_0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/list_selector_background" >
+
+            <ImageView
+                android:id="@+id/contextColour_0"
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:duplicateParentState="true" />
+
+            <TextView
+                android:id="@+id/project_0"
+                style="@style/prehoneycomb_widget_project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/contextColour_0"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dip"
+                android:singleLine="false" />
+            
+            <TextView
+                android:id="@+id/description_0"
+                style="@style/prehoneycomb_widget_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/project_0"
+                android:layout_toRightOf="@+id/contextColour_0"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dip"
+                android:singleLine="false" />    
+
+   
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/widget_dashed_line_bitmap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/entry_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/list_selector_background" >
+
+            <ImageView
+                android:id="@+id/contextColour_1"
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:duplicateParentState="true" />
+
+            <TextView
+                android:id="@+id/project_1"
+                style="@style/prehoneycomb_widget_project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/contextColour_1"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dip"
+                android:singleLine="false" />
+             <TextView
+                android:id="@+id/description_1"
+                style="@style/prehoneycomb_widget_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/project_1"
+                android:layout_toRightOf="@+id/contextColour_1"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dip"
+                android:singleLine="false" />
+      
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/widget_dashed_line_bitmap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/entry_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/list_selector_background" >
+
+            <ImageView
+                android:id="@+id/contextColour_2"
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:duplicateParentState="true" />
+
+            <TextView
+                android:id="@+id/project_2"
+                style="@style/prehoneycomb_widget_project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/contextColour_2"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dip"
+                android:singleLine="false" />
+
+            <TextView
+                android:id="@+id/description_2"
+                style="@style/prehoneycomb_widget_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/project_2"
+                android:layout_toRightOf="@+id/contextColour_2"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dip"
+                android:singleLine="false" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/widget_dashed_line_bitmap" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="1.0dip"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/widget_header"
+        android:layout_toLeftOf="@id/widget_control"
+        android:background="@color/widget_divider" />
+
+</RelativeLayout>

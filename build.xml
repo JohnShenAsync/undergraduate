@@ -1,0 +1,495 @@
+<project name="ant" default="release">  
+    <!-- ANT环境变量 -->  
+    <property environment="env" />  
+	<!-- 使用第三方的ant包，使ant支持for循环-->
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">  
+	  <classpath>  
+		<pathelement location="lib/ant-contrib-1.0b3.jar"/>  
+	  </classpath>  
+	</taskdef>
+    <!-- 应用名称 -->  
+    <property name="appName" value="${ant.project.name}"/>  
+    <!-- SDK目录(获取操作系统环境变量ANDROID_SDK_HOME的值) -->  
+    <property name="sdk-folder" value="D:\android\sdk" />  
+    <!-- SDK指定平台目录 -->  
+    <property name="sdk-platform-folder" value="${sdk-folder}/platforms/android-17"/>  
+    <!-- SDK中tools目录 -->  
+	<!--
+    <property name="sdk-tools" value="${sdk-folder}/tools" />  
+    -->
+    <property name="sdk-tools" value="${sdk-folder}/tools" /> 
+    <!-- SDK指定平台中tools目录 -->  
+    <property name="sdk-platform-tools" value="${sdk-folder}/platform-tools" />  
+	 
+    <!-- 使用到的命令(当前系统为windows,如果系统为linux,可将.bat文件替换成相对应的命令) -->  
+    <property name="aapt" value="${sdk-platform-tools}/aapt" />  
+    <property name="aidl" value="${sdk-platform-tools}/aidl" />  
+    <property name="dx" value="${sdk-platform-tools}/dx.bat" />  
+    <property name="apkbuilder" value="${sdk-tools}/apkbuilder.bat" />  
+    <property name="jarsigner" value="${env.JAVA_HOME}/bin/jarsigner" />  
+	<property name="zipalign" value="${sdk-tools}/zipalign.exe" />
+      
+    <!-- 编译需要的jar; 如果项目使用到地图服务则需要maps.jar -->  
+    <property name="android-jar" value="${sdk-platform-folder}/android.jar" /> 
+    <!-- basil seems there is a bug in proguard that path can't be space -->
+
+    <property name="proguard-android-jar" value="${sdk-platform-folder}/android.jar" /> 
+    <property name="android-maps-jar" value="${sdk-folder}/add-ons/addon_google_apis_google_inc_8/libs/maps.jar"/>  
+
+	<!-- -->
+	<property name="channelname" value="" />  
+	<property name="channelkey" value="" />  
+		
+    <!-- 编译aidl文件所需的预处理框架文件framework.aidl -->  
+    <property name="framework-aidl" value="${sdk-platform-folder}/framework.aidl" />  
+  
+	<property name="keystore-dir" value="undergraduate_keystore" />  
+    
+  
+    <!-- 清单文件 -->  
+    <property name="manifest-xml" value="AndroidManifest.xml" />
+    <property name="sherlock-manifest-xml" value="../../hg/ActionBarSherlock/actionbarsherlock/AndroidManifest.xml" />  
+    <property name="uitableview-manifest-xml" value="../../hg/android-uitableview/android-uitableview/AndroidManifest.xml" />  
+    <property name="SlidingMenu-manifest-xml" value="../../hg/SlidingMenu-master/library/AndroidManifest.xml" />    
+    <property name="MainLibs-manifest-xml" value="../../hg/ShareSDK/Libs/Libs/MainLibs/AndroidManifest.xml" />    
+    <property name="OneKeyShare-manifest-xml" value="../../hg/ShareSDK/Libs/Libs/OneKeyShare/AndroidManifest.xml" />      
+    <!-- 源文件目录 -->  
+    <property name="resource-dir" value="res" />  
+    <property name="asset-dir" value="assets" />  
+    
+    <property name="sherlock-resource-dir" value="../../hg/ActionBarSherlock/actionbarsherlock/res" />  
+    <property name="uitableview-resource-dir" value="../../hg/android-uitableview/android-uitableview/res" />
+    <property name="SlidingMenu-resource-dir" value="../../hg/SlidingMenu-master/library/res" />    
+    <property name="MainLibs-resource-dir" value="../../hg/ShareSDK/Libs/Libs/MainLibs/res" />    
+    <property name="OneKeyShare-resource-dir" value="../../hg/ShareSDK/Libs/Libs/OneKeyShare/res" />       
+    <property name="sherlock-resource-src" value="../../hg/ActionBarSherlock/actionbarsherlock/src" /> 
+	<!-- <property name="sherlock-resource-gen" value="../../hg/ActionBarSherlock/actionbarsherlock/gen" /> --> 
+    <property name="uitableview-resource-src" value="../../hg/android-uitableview/android-uitableview/src" /> 
+    <property name="SlidingMenu-resource-src" value="../../hg/SlidingMenu-master/library/src" />    
+    <property name="MainLibs-resource-src" value="../../hg/ShareSDK/Libs/Libs/MainLibs/src" />    
+    <property name="OneKeyShare-resource-src" value="../../hg/ShareSDK/Libs/Libs/OneKeyShare/src" />       
+    <!-- java源文件目录 -->  
+    <property name="srcdir" value="src" />  
+    <property name="srcdir-ospath" value="${basedir}/${srcdir}" />  
+    <!-- 外部类库所在目录 -->  
+    <property name="external-lib" value="libs" />  
+    <property name="external-lib-ospath" value="${basedir}/${external-lib}" />  
+    <property name="sherlock-external-lib-ospath" value="../../hg/ActionBarSherlock/actionbarsherlock/${external-lib}" />
+    <property name="SlidingMenu-external-lib-ospath" value="../../hg/SlidingMenu-master/library/${external-lib}" />
+    <property name="MainLibs-external-lib-ospath" value="../../hg/ShareSDK/Libs/Libs/MainLibs/${external-lib}" />
+    <property name="OneKeyShare-external-lib-ospath" value="../../hg/ShareSDK/Libs/Libs/OneKeyShare/${external-lib}" />
+	<property name="sherlock-fake-lib-ospath" value="${basedir}/lib4ant" />  
+	
+	<property name="proguard-dir" value="proguard"/>
+    <property name="unoptimized" value="${proguard-dir}/unoptimized.jar"/>
+    <property name="optimized" value="${proguard-dir}/optimized.jar"/>
+	<!-- 要修改的java文件目录 -->
+	<property name="file.replace.path" value="net/basilwang"/>
+	<property name="fileName" value="ShareOnWeibo.java"/>
+	
+	
+	<!-- 渠道名:渠道号 -->
+	<!--<property name="key" value="eoemarket:10120:http://www.eoemarket.com/soft/115012.html,
+	    tap:10360:http://www.mumayi.com/android-120469.html,
+		hiapk:10030:http://apk.hiapk.com/html/2013/01/1163238.html,
+		appchina:10050:http://www.appchina.com/app/net.basilwang/,
+		gfan:10020:http://apk.gfan.com/Product/App294696.html,
+		mumayi:10070:http://www.mumayi.com/android-120469.html" /> --> 
+     <property name="key" value="eoemarket:10120:http://www.mumayi.com/android-120469.html"/>
+	<!-- 版本 -->
+	<property name="version" value="3.0" />
+
+	
+	<!-- 初始化工作 -->  
+    <target name="init">  
+        <echo>目录初始化....</echo>  
+		    <!-- 生成R文件的相对目录 -->  
+			<var name="outdir-gen" value="gen" />  
+			<!-- 编译后的文件放置目录 -->  
+			<var name="outdir-bin" value="bin-${channelname}" />  
+		    <!-- 生成class目录 -->  
+			<var name="outdir-classes" value="${outdir-bin}" />  
+			<var name="outdir-classes-ospath" value="${basedir}/${outdir-classes}" />  
+		  
+			<!-- classes.dex相关变量 -->  
+			<var name="dex-file" value="classes.dex" />  
+			<var name="dex-path" value="${outdir-bin}/${dex-file}" />  
+			<var name="dex-ospath" value="${basedir}/${dex-path}" />  
+		  
+			<!-- 经过aapt生成的资源包文件 -->  
+			<var name="resources-package" value="${outdir-bin}/resources.ap_" />  
+			<var name="resources-package-ospath" value="${basedir}/${resources-package}" />  
+			  
+			<!-- 未认证apk包 -->  
+			<var name="out-unsigned-package" value="${outdir-bin}/${appName}-unsigned.apk" />  
+			<var name="out-unsigned-package-ospath" value="${basedir}/${out-unsigned-package}" />  
+			  
+			<!-- 证书文件 -->  
+			<var name="keystore-file" value="${keystore-dir}" />  
+			  
+			<!-- 已认证apk包 -->  
+			<var name="out-signed-package" value="${outdir-bin}/${appName}-${channelname}-${version}.apk" />  
+			<var name="out-signed-package-ospath" value="${basedir}/${out-signed-package}" />  
+        <delete dir="${outdir-bin}" />  
+        <mkdir dir="${outdir-bin}" />  
+        <mkdir dir="${outdir-classes}" />  
+    </target>  
+	
+	<!--循环打包 -->
+	<target name="deploy"> 
+	   <copy file="${basedir}/${srcdir}/${file.replace.path}/${fileName}" todir="..\temp\build\META-INF" />
+	   <foreach target="modify_manifest" list="${key}" param="nameandchannel" delimiter=",">  
+	   </foreach>  
+	 </target>  
+	 
+	<target name="modify_manifest">  
+		<!-- 获取渠道名字 -->
+		<propertyregex override="true" property="channelname" input="${nameandchannel}" regexp="(\w*):\d" select="\1"/>
+		<!-- 获取渠道号码 -->
+		<propertyregex override="true" property="channelkey" input="${nameandchannel}" regexp="(\d{5}):" select="\1"/>
+		<propertyregex override="true" property="downloadAddress" input="${nameandchannel}" regexp=".{5}//.*" select="\0"/>
+		<!-- 正则匹配替换渠道号 -->
+		<replaceregexp flags="g" byline="false" encoding="UTF-8">  
+			<regexp pattern='meta-data android:name="YOUMI_CHANNEL" android:value="(.*)"' />		
+			<substitution expression='meta-data android:name="YOUMI_CHANNEL" android:value="${channelkey}"' />  
+		<fileset dir="" includes="AndroidManifest.xml" />  
+		</replaceregexp> 
+		<replace file ="${basedir}/${srcdir}/${file.replace.path}/${fileName}" token="@DownloadAddress@" value="${downloadAddress}" encoding="utf-8" /> 
+		<antcall target="zipalign" />
+	</target>  
+	
+	<!-- 根据工程中的资源文件生成R.java文件  -->  
+    <target name="gen-R" depends="init">  
+        <echo>生成R.java文件....</echo>  
+        <exec executable="${aapt}" failonerror="true">  
+            <arg value="package" />  
+            <arg value="-f" />  
+            <arg value="-m" /> 
+            <arg value="--auto-add-overlay" /> 
+            <arg value="-J" />  
+            <arg value="${outdir-gen}" />  
+            <arg value="-S" />  
+            <arg value="${resource-dir}" />  
+            <arg value="-S" />
+            <arg value="${sherlock-resource-dir}" />
+            <arg value="-S" />
+            <arg value="${uitableview-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${SlidingMenu-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${MainLibs-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${OneKeyShare-resource-dir}" />         
+            <arg value="-M" />  
+            <arg value="${manifest-xml}" />  
+            <arg value="-I" />  
+            <arg value="${android-jar}" />  
+        </exec>  
+        <echo>generating R.java for library to dir gen (using aapt) ... </echo>
+<exec executable="${aapt}" failonerror="true">
+    <arg value="package" />
+    <arg value="-m" />
+    <arg value="--non-constant-id" /> <!-- 加了这个参数-->
+    <arg value="--auto-add-overlay" />
+    <arg value="-J" />
+    <arg value="${outdir-gen}" />
+            <arg value="-S" />  
+            <arg value="${resource-dir}" />  
+            <arg value="-S" />
+            <arg value="${sherlock-resource-dir}" />
+            <arg value="-S" />
+            <arg value="${uitableview-resource-dir}" /> 
+            <arg value="-S" />
+            <arg value="${SlidingMenu-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${MainLibs-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${OneKeyShare-resource-dir}" />       
+            <arg value="-M" />  
+            <arg value="${sherlock-manifest-xml}" />  
+    <arg value="-I" />
+    <arg value="${android-jar}" />
+</exec>
+        <echo>generating R.java for library to dir gen (using aapt) ... </echo>
+<exec executable="${aapt}" failonerror="true">
+    <arg value="package" />
+    <arg value="-m" />
+    <arg value="--non-constant-id" /> <!-- 加了这个参数-->
+    <arg value="--auto-add-overlay" />
+    <arg value="-J" />
+    <arg value="${outdir-gen}" />
+  <arg value="-S" />  
+            <arg value="${resource-dir}" />  
+            <arg value="-S" />
+            <arg value="${sherlock-resource-dir}" />
+            <arg value="-S" />
+            <arg value="${uitableview-resource-dir}" /> 
+            <arg value="-S" />
+            <arg value="${SlidingMenu-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${MainLibs-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${OneKeyShare-resource-dir}" />     
+            <arg value="-M" />  
+            <arg value="${uitableview-manifest-xml}" />  
+    <arg value="-I" />
+    <arg value="${android-jar}" />
+</exec>
+<echo>generating R.java for library to dir gen (using aapt) ... </echo>
+<exec executable="${aapt}" failonerror="true">
+    <arg value="package" />
+    <arg value="-m" />
+    <arg value="--non-constant-id" /> <!-- 加了这个参数-->
+    <arg value="--auto-add-overlay" />
+    <arg value="-J" />
+    <arg value="${outdir-gen}" />
+            <arg value="-S" />  
+            <arg value="${resource-dir}" />  
+            <arg value="-S" />
+            <arg value="${sherlock-resource-dir}" />
+            <arg value="-S" />
+            <arg value="${uitableview-resource-dir}" /> 
+            <arg value="-S" />
+            <arg value="${SlidingMenu-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${MainLibs-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${OneKeyShare-resource-dir}" />       
+            <arg value="-M" />  
+            <arg value="${SlidingMenu-manifest-xml}" />  
+    <arg value="-I" />
+    <arg value="${android-jar}" />
+</exec>
+<echo>generating R.java for library to dir gen (using aapt) ... </echo>
+<exec executable="${aapt}" failonerror="true">
+    <arg value="package" />
+    <arg value="-m" />
+    <arg value="--non-constant-id" /> <!-- 加了这个参数-->
+    <arg value="--auto-add-overlay" />
+    <arg value="-J" />
+    <arg value="${outdir-gen}" />
+            <arg value="-S" />  
+            <arg value="${resource-dir}" />  
+            <arg value="-S" />
+            <arg value="${sherlock-resource-dir}" />
+            <arg value="-S" />
+            <arg value="${uitableview-resource-dir}" /> 
+            <arg value="-S" />
+            <arg value="${SlidingMenu-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${MainLibs-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${OneKeyShare-resource-dir}" />       
+            <arg value="-M" />  
+            <arg value="${MainLibs-manifest-xml}" />  
+    <arg value="-I" />
+    <arg value="${android-jar}" />
+</exec>
+<echo>generating R.java for library to dir gen (using aapt) ... </echo>
+<exec executable="${aapt}" failonerror="true">
+    <arg value="package" />
+    <arg value="-m" />
+    <arg value="--non-constant-id" /> <!-- 加了这个参数-->
+    <arg value="--auto-add-overlay" />
+    <arg value="-J" />
+    <arg value="${outdir-gen}" />
+            <arg value="-S" />  
+            <arg value="${resource-dir}" />  
+            <arg value="-S" />
+            <arg value="${sherlock-resource-dir}" />
+            <arg value="-S" />
+            <arg value="${uitableview-resource-dir}" /> 
+            <arg value="-S" />
+            <arg value="${SlidingMenu-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${MainLibs-resource-dir}" />    
+            <arg value="-S" />
+            <arg value="${OneKeyShare-resource-dir}" />       
+            <arg value="-M" />  
+            <arg value="${OneKeyShare-manifest-xml}" />  
+    <arg value="-I" />
+    <arg value="${android-jar}" />
+</exec>
+    </target> 
+     
+	
+	<!-- 编译aidl文件 -->  
+    <target name="aidl" depends="gen-R">  
+        <echo>编译aidl文件....</echo>  
+        <apply executable="${aidl}" failonerror="true">  
+            <!-- 指定预处理文件 -->  
+            <arg value="-p${framework-aidl}"/>  
+            <!-- aidl声明的目录 -->  
+            <arg value="-I${srcdir}"/>  
+            <!-- 目标文件目录 -->  
+            <arg value="-o${outdir-gen}"/>  
+            <!-- 指定哪些文件需要编译 -->  
+            <fileset dir="${srcdir}">  
+                <include name="**/*.aidl"/>  
+            </fileset>  
+        </apply>  
+    </target>  
+	
+	<!-- 将工程中的java源文件编译成class文件 -->  
+    <target name="compile" depends="aidl">  
+
+        <echo>compiling java files to class files (include R.java, library and the third-party jars) ... </echo>
+        <echo>java源文件编译成class文件....</echo>  
+        <javac encoding="utf-8"
+				target="1.6" 
+				srcdir="." 
+				destdir="${outdir-classes}" 
+				bootclasspath="${android-jar}"
+				verbose="false"
+				>  
+			<src path="${sherlock-resource-src}" />
+			<src path="${uitableview-resource-src}" />
+			<src path="${SlidingMenu-resource-src}" />
+			<src path="${MainLibs-resource-src}" />
+			<src path="${OneKeyShare-resource-src}" />
+            <src path="${srcdir}" />
+            <src path="${outdir-gen}" />
+        	<!-- <include name="${sherlock-resource-gen}/com/actionbarsherlock/BuildConfig.java" /> -->
+			<!-- <compilerarg line="-encoding GBK "/>  -->
+            <classpath>               
+                <fileset dir="${sherlock-external-lib-ospath}" includes="*.jar"/>  
+                <fileset dir="${SlidingMenu-external-lib-ospath}" includes="*.jar"/>  
+                <fileset dir="${MainLibs-external-lib-ospath}" includes="*.jar"/>  
+                <fileset dir="${OneKeyShare-external-lib-ospath}" includes="*.jar"/>  
+                <fileset dir="${external-lib}" includes="*.jar"/>  
+            </classpath>
+        </javac>  
+        
+    </target> 
+    
+    
+    <target name="optimize" unless="nooptimize">
+  <jar basedir="${outdir-classes}" destfile="${unoptimized}"/>
+ 
+  <java jar="${proguard-dir}/proguard.jar" fork="true" failonerror="true">
+   <jvmarg value="-Dmaximum.inlined.code.length=16"/>
+   <arg value="@${proguard-dir}/proguard.cfg"/>      
+   <arg value="-injars ${unoptimized}"/>
+   <arg value="-outjars ${optimized}"/>
+   <arg value='-libraryjars "${proguard-android-jar}"'/>
+   <arg value='-libraryjars "${MainLibs-external-lib-ospath}"'/>
+   <arg value='-libraryjars "${external-lib}"'/>
+  </java>     
+ 
+  <!-- Delete source pre-optimized jar -->     
+  <!--delete file="${unoptimized}"/-->
+ 
+  <!-- Unzip target optimization jar to original output, and delete optimized.jar -->
+  <delete dir="${outdir-classes}"/>
+  <mkdir dir="${outdir-classes}"/>
+  <unzip src="${proguard-dir}/optimized.jar" dest="${outdir-classes}"/>
+ 
+  <!-- Delete optimized jar (now unzipped into bin directory) -->
+  <delete file="optimized.jar"/>
+ 
+   </target>
+   
+	<!-- 将复制到temp中的java文件替换回来 -->
+	<target name="replaceJava" depends="compile">
+		<echo>将复制到temp中的java文件替换回来。。。。</echo>  
+		<delete file="${basedir}\${srcdir}\${file.replace.path}\${fileName}"/>
+		<copy file="..\temp\build\META-INF\${fileName}" todir="${basedir}\${srcdir}\${file.replace.path}" />
+	</target>
+	
+	<!-- 将.class文件转化成.dex文件 -->  
+    <target name="dex" depends="compile,optimize,replaceJava">  
+        <echo>将.class文件转化成.dex文件....</echo>  
+        <exec executable="${dx}" failonerror="true" >  
+            <arg value="--dex" /> 
+            <!-- 输出文件 -->  
+            <arg value="--output=${dex-ospath}" />  
+            <!-- 要生成.dex文件的源classes和libraries -->  
+            <arg value="${outdir-classes-ospath}" />  
+            <arg value="${external-lib-ospath}"/>  
+            <!-- <arg value="${sherlock-fake-lib-ospath}"/>  -->
+        </exec>  
+    </target>  
+	 
+	
+	 <target name="package-res-and-assets">  
+           <echo>将资源文件放进输出目录....</echo>  
+        <exec executable="${aapt}" failonerror="true">  
+            <arg value="package" />  
+            <arg value="-f" />  
+            <arg value="-M" />  
+            <arg value="${manifest-xml}" />  
+            <arg value="-S" />  
+            <arg value="${resource-dir}" />  
+            <arg value="-S" />  
+            <arg value="${sherlock-resource-dir}" />  
+            <arg value="-S" />  
+            <arg value="${uitableview-resource-dir}" />     
+            <arg value="-S" />  
+            <arg value="${SlidingMenu-resource-dir}" />     
+            <arg value="-S" />  
+            <arg value="${MainLibs-resource-dir}" />     
+            <arg value="-S" />  
+            <arg value="${OneKeyShare-resource-dir}" />           
+            <arg value="-A" />  
+            <arg value="${asset-dir}" />  
+            <arg value="-I" />  
+            <arg value="${android-jar}" />  
+            <arg value="-F" />  
+            <arg value="${resources-package}" /> 
+            <arg value="--auto-add-overlay" /> 
+        </exec>  
+       
+    </target>  
+	<!-- 打包成未签证的apk -->  
+    <target name="package" depends="dex, package-res-and-assets">  
+        <echo>打包成未签证的apk....</echo>  
+        <exec executable="${apkbuilder}" failonerror="true">  
+            <arg value="${out-unsigned-package-ospath}" />  
+            <arg value="-u" />  
+            <arg value="-z" />  
+            <arg value="${resources-package-ospath}" />  
+            <arg value="-f" />  
+            <arg value="${dex-ospath}" />  
+            <arg value="-rf" />  
+            <arg value="${srcdir-ospath}" />  
+        </exec>  
+    </target>  
+	
+	<!-- 对apk进行签证 -->  
+    <target name="jarsigner" depends="package">  
+        <echo>Packaging signed apk for release...</echo>  
+        <exec executable="${jarsigner}" > 
+            <arg value="-sigalg" /> 
+            <arg value="MD5withRSA" />
+            <arg value="-digestalg" />
+            <arg value="SHA1" />
+            <arg value="-keystore" />  
+            <arg value="${keystore-file}" />  
+            <arg value="-storepass" />  
+            <arg value="sdie?!3406" />  
+            <arg value="-keypass" />  
+            <arg value="sdie?!3406" />  
+            <arg value="-signedjar" />  
+            <arg value="${out-signed-package-ospath}" />  
+            <arg value="${out-unsigned-package-ospath}"/>  
+            <!-- 不要忘了证书的别名 -->  
+            <arg value="un"/>  
+        </exec>  
+    </target>  
+	
+	<!-- 发布 -->  
+    <target name="release" depends="jarsigner">  
+        <!-- 删除未签证apk -->  
+        <echo>APK is released. path:${out-signed-package-ospath}</echo>  
+    </target>  
+	
+	<target name="zipalign" depends="release">
+		<exec executable="${zipalign}" failonerror="true">
+            <arg value="-v" />
+            <arg value="4" />
+            <arg value="${out-signed-package-ospath}" />
+            <arg value="${out-signed-package-ospath}-zipaligned.apk" />
+        </exec>
+	</target>
+	
+</project>  

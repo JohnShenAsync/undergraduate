@@ -1,0 +1,4 @@
+<resources>
+    <bool name="atLeastHoneyComb">false</bool>
+    <bool name="preHoneyComb">true</bool>
+</resources>

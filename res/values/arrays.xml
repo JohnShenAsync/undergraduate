@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 定义字符串数组 -->
+    <array name="colors">
+        <item>#828283</item>
+        <item>#7beaff</item>
+        <item>#00f</item>
+        <item>#f00</item>
+        <item>#0f0</item>
+        <item>#00f</item>
+        <item>#f00</item>
+        <item>#0f0</item>
+        <item>#00f</item>
+    </array>
+    <array name="text_colours">
+        <item>c5b6985</item>
+        <item>c2c6cfc</item>
+        <item>c1800c9</item>
+        <item>c5528a1</item>
+        <item>c854f61</item>
+        <item>cca000f</item>
+        <item>cdee5f2</item>
+        <item>ce1ecfe</item>
+        <item>ce0e2fe</item>
+        <item>ce1d5f8</item>
+        <item>cfde9f4</item>
+        <item>cffe3e3</item>
+        <item>cea7015</item>
+        <item>cb16d12</item>
+        <item>ca98b13</item>
+        <item>c626332</item>
+        <item>c639930</item>
+        <item>c006634</item>
+        <item>cfef0e2</item>
+        <item>cf9dcb4</item>
+        <item>cf2e7b4</item>
+        <item>cfeffd5</item>
+        <item>cf9ffef</item>
+        <item>cf1f5ec</item>
+    </array>
+    <array name="background_colours">
+        <item>cdee5f2</item>
+        <item>ce1ecfe</item>
+        <item>ce0e2fe</item>
+        <item>ce1d5f8</item>
+        <item>cfde9f4</item>
+        <item>cffe3e3</item>
+        <item>c5b6985</item>
+        <item>c2c6cfc</item>
+        <item>c1800c9</item>
+        <item>c5528a1</item>
+        <item>c854f61</item>
+        <item>cca000f</item>
+        <item>cfef0e2</item>
+        <item>cf9dcb4</item>
+        <item>cf2e7b4</item>
+        <item>cfeffd5</item>
+        <item>cf9ffef</item>
+        <item>cf1f5ec</item>
+        <item>cea7015</item>
+        <item>cb16d12</item>
+        <item>ca98b13</item>
+        <item>c626332</item>
+        <item>c639930</item>
+        <item>c006634</item>
+    </array>
+
+    <string-array name="classindexs">
+        <item>上1</item>
+        <item>上2</item>
+        <item>上3</item>
+        <item>上4</item>
+        <item>下1</item>
+        <item>下2</item>
+        <item>下3</item>
+        <item>下4</item>
+        <item>晚1</item>
+        <item>晚2</item>
+        <item>晚3</item>
+    </string-array>
+    <string-array name="weekdays">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </string-array>
+    <string-array name="severity">
+        <item>重要</item>
+        <item>尚可</item>
+        <item>不重要</item>
+    </string-array>
+    <string-array name="viewtype">
+        <item>课表</item>
+        <item>成绩</item>
+        <item>下课表</item>
+        <item>设置</item>
+    </string-array>
+    <string-array name="semesterindex">
+        <item>2009&#8211;2010学年第一学期</item>
+        <item>2009&#8211;2010学年第二学期</item>
+        <item>2010&#8211;2011学年第一学期</item>
+        <item>2010&#8211;2011学年第二学期</item>
+        <item>2011&#8211;2012学年第一学期</item>
+        <item>2011&#8211;2012学年第二学期</item>
+        <item>2012&#8211;2013学年第一学期</item>
+    </string-array>
+    <string-array name="semesterindexvalue">
+        <item>@string/semesterindexvalue1</item>
+        <item>@string/semesterindexvalue2</item>
+        <item>@string/semesterindexvalue3</item>
+        <item>@string/semesterindexvalue4</item>
+        <item>@string/semesterindexvalue5</item>
+        <item>@string/semesterindexvalue6</item>
+        <item>@string/semesterindexvalue7</item>
+    </string-array>
+
+</resources>
